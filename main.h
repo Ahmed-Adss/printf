@@ -31,7 +31,6 @@ int print_oct(va_list list);
 int prbin(unsigned int val);
 int print_bin(va_list lists);
 int in_hex(va_list lists);
-int print_hex(unsigned long int val);
 int print_unsign(va_list lists);
 int calc_len(unsigned int val);
 int in_hexc(va_list lists);
