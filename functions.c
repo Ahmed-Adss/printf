@@ -7,27 +7,40 @@
  *
  * Return: number of char printed
  */
-
-int print_char(va_list lists, char)
+int print_char(va_list lists)
 {
-	char c = va_arg(lists, int);
-	write(1, &c, 1);
+	_putchar(va_arg(lists, int));
+	return (1);
 }
-
 /**
  * print_string - prints a string
  * @lists: list of argument
  *
  * Return: numbers of char printed
  */
-
-int print_string(va_list lists, char)
+int print_string(va_list lists)
 {
+	int i;
 	char *str = va_arg(lists, char*);
-	int str_len = 0;
 
-	while (str(str_len) !=  '\0')
-		str_len++;
-
-	write(1, str, str_len);
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	for (i = 0 ; str[i] ; i++)
+	{
+		_putchar(str[i]);
+	}
+	return (strlen(str));
+}
+/**
+ * print_mod - print modular symbol
+ * @lists: input percent to check
+ * Return: (1) always 1 to success
+ */
+int print_mod(va_list lists)
+{
+	(void) lists;
+	_putchar('%');
+	return (1);
 }

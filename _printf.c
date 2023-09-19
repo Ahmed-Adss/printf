@@ -7,47 +7,38 @@
  */
 int _printf(const char *format, ...)
 {
-	int chr = 0;
 	va_list va_li;
-
-	if (format == NULL || format == '\n')
+	int len = 0, i = 0, j;
+	prtmt format_func[] = { {'c', print_char}, {'s', print_string}, {'%', print_mod},};
+	
+	if (format == NULL || (format[i] == '%' && (format[i + 1] == '\0')))
 		return (-1);
 
 	va_start(va_li, format);
-
-	while (*format)
+	while (format[i] != '\0')
 	{
-		if (*format != '%')
+		if (format[i] != '%')
 		{
-			write(1, format, 1);
-			chr++;
-		}
-		else
+			_putchar(format[i]);
+			len++;
+		} else
 		{
-			format++;
-
-			if (format == "\0" || format == " ")
-				return (-1);
-
-			if (*format == '%')
+			i++;
+			for (j = 0 ; j < 5 ; j++)
 			{
-				write(1, format, 1);
-				chr++;
-			}
-			else if (*format == 'c')
+				if (format[i] == format_func[j].specifier)
+				{
+					len += format_func[j].print(va_li);
+					break;
+				}}
+			if (j >= 5)
 			{
-				print_char(format, &c);
-				chr++;
-			}
-			else if (*format == 's')
-			{
-				print_string(format, &str);
-				chr += str_len;
-			}
-		}
-		format++;
+				i--;
+				_putchar(format[i]);
+				len++;
+			}}
+		i++;
 	}
 	va_end(va_li);
-
-	return (chr);
+	return (len);
 }
