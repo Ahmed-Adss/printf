@@ -16,24 +16,24 @@ int print_oct(va_list list)
  * @num: input number
  * Return: length of printed number
  */
-int oct_rec(unsigned int val)
+int oct_rec(unsigned int num)
 {
 	int l = 0;
 
-	if (val == 0)
+	if (num == 0)
 	{
 	_putchar('0');
 	return (1);
 	}
-	if (val / 8 == 0)
+	if (num / 8 == 0)
 	{
-	_putchar((val % 8) + '0');
+	_putchar((num % 8) + '0');
 	l++;
 	}
 	else
 	{
-		l = (1 + oct_rec(val / 8));
-		_putchar((val % 8) + '0');
+		l = (1 + oct_rec(num / 8));
+		_putchar((num % 8) + '0');
 	}
 	return (l);
 }
