@@ -19,7 +19,6 @@ int _printf(const char *format, ...);
 int print_char(va_list lists);
 int print_string(va_list lists);
 int print_int(va_list varg);
-int int_recur(unsigned int val);
 int print_mod(va_list lists);
 
 
