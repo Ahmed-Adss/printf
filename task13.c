@@ -19,7 +19,7 @@ int print_rev(va_list lists)
 		{
 			len++;
 		}
-		for (x = (len -1) ; x >= 0 ; x--)
+		for (x = (len - 1) ; x >= 0 ; x--)
 		{
 			_putchar(str[x]);
 		}
