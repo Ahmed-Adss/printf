@@ -39,6 +39,12 @@ int print_hex(unsigned long int val)
 			len = (1 + print_hex(val / 16));
 			_putchar((val % 16) + '0');
 		}
+		else
+		{
+
+			len = (1 + print_hex(val / 16));
+			_putchar((val % 16) + 87);
+		}
 	}
 	return (len);
 }
