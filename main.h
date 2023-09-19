@@ -18,5 +18,8 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list lists);
 int print_string(va_list lists);
+int print_int(va_list varg);
+
+
 
 #endif

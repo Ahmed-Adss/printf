@@ -8,9 +8,9 @@
 */
 
 
-int fun_int(va_list varg)
+int print_int(va_list list)
 {
-	int num = va_arg(varg, int);
+	int num = va_arg(list, int);
 	int l = 0;
 	unsigned int neg = num;
 
@@ -26,7 +26,7 @@ int fun_int(va_list varg)
 		return (1);
 	}
 
-	l += recur(neg);
+	l += recur (neg);
 	return (l);
 }
 

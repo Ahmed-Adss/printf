@@ -2,22 +2,22 @@
 
 /**
  * print_char - prints a char
- *
- *
- *
+ * @lists: input to function
  * Return: number of char printed
  */
+
 int print_char(va_list lists)
 {
 	_putchar(va_arg(lists, int));
 	return (1);
 }
+
 /**
  * print_string - prints a string
  * @lists: list of argument
- *
  * Return: numbers of char printed
  */
+
 int print_string(va_list lists)
 {
 	int i;
@@ -33,8 +33,9 @@ int print_string(va_list lists)
 	}
 	return (strlen(str));
 }
+
 /**
- * print_mod - print modular symbol
+ * print_mod - print mod symbol
  * @lists: input percent to check
  * Return: (1) always 1 to success
  */
