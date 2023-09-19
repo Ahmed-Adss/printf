@@ -10,7 +10,8 @@ int _printf(const char *format, ...)
 	int len = 0, i = 0, j;
 	prtmt format_func[] = { {'c', print_char}, {'s', print_string},
 	{'%', print_mod}, {'d', print_int}
-	, {'i', print_int}, {'o', print_oct}, {'b', print_bin}, };
+	, {'i', print_int}, {'o', print_oct}, {'b', print_bin}
+	, {'x', in_hex}, {'u', print_unsign}, {'X', in_hexc}, };
 	if (format == NULL || (format[i] == '%' && (format[i + 1] == '\0')))
 		return (-1);
 
@@ -24,14 +25,14 @@ int _printf(const char *format, ...)
 		} else
 		{
 			i++;
-			for (j = 0 ; j < 7 ; j++)
+			for (j = 0 ; j < 10 ; j++)
 			{
 				if (format[i] == format_func[j].specifier)
 				{
 					len += format_func[j].print(va_li);
 					break;
 				}}
-			if (j >= 7)
+			if (j >= 10)
 			{
 				i--;
 				_putchar(format[i]);
