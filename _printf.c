@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 					len += format_func[j].print(va_li);
 					break;
 				}}
-			if (j >= 5)
+			if (j >= 7)
 			{
 				i--;
 				_putchar(format[i]);
