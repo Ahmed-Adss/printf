@@ -20,6 +20,6 @@ int print_char(va_list lists);
 int print_string(va_list lists);
 int print_int(va_list varg);
 int print_mod(va_list lists);
-
+int recur(unsigned int val);
 
 #endif
