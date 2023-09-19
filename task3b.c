@@ -13,7 +13,7 @@ int print_unsign(va_list lists)
 		_putchar('0');
 		return (1);
 	}
-	len += recur(num)
+	len += recur(num);
 	return (len);
 }
 /**
