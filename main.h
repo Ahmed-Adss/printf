@@ -8,6 +8,11 @@
 #include <limits.h>
 #include <stdlib.h>
 
+/**
+ * struct form - structure name for used to get symbols and its functions.
+ * @specifier: Input symbol
+ * @print: function pointer
+ */
 typedef struct form
 {
 	char specifier;
