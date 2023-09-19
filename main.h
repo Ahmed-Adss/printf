@@ -36,4 +36,5 @@ int calc_len(unsigned int val);
 int in_hexc(va_list lists);
 int print_hexc(unsigned long int val);
 int print_hex(unsigned long int val);
+int print_rev(va_list lists);
 #endif
