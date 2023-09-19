@@ -8,15 +8,7 @@ int in_hexc(va_list lists)
 {
 	unsigned long int num = va_arg(lists, unsigned long int);
 
-	if (num > 0)
-	{
-		return (print_hexc(num));
-	}
-	else
-	{
-		_putchar('0');
-		return (1);
-	}
+	return (print_hexc(num));
 }
 /**
  * print_hexc - print HEXAdecimal
@@ -35,8 +27,8 @@ int print_hexc(unsigned long int val)
 	{
 		if ((val % 16) <= 9)
 		{
-			len = (1 + print_hexc(val % 16));
-			_putchar((val / 16) + '0');
+			len = (1 + print_hexc(val / 16));
+			_putchar((val % 16) + '0');
 		}
 		else
 		{
