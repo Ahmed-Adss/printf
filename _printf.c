@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - print function
  * @format: format
@@ -9,7 +8,7 @@ int _printf(const char *format, ...)
 {
 	va_list va_li;
 	int len = 0, i = 0, j;
-	prtmt format_func[] = { {'c', print_char}, {'s', print_string}, {'%', print_mod}, {'d', print_int}, {'i', print_int}};
+	prtmt format_func[] = { {'c', print_char}, {'s', print_string}, {'%', print_mod}, {'d', print_int}, {'i', print_int}, };
 	
 	if (format == NULL || (format[i] == '%' && (format[i + 1] == '\0')))
 		return (-1);

@@ -26,7 +26,7 @@ int print_int(va_list list)
 		return (1);
 	}
 
-	l += recur (neg);
+	l += int_recur (neg);
 	return (l);
 }
 
@@ -39,7 +39,7 @@ int print_int(va_list list)
 */
 
 
-int recur(unsigned int val)
+int int_recur(unsigned int val)
 {
 	int l;
 
@@ -48,7 +48,7 @@ int recur(unsigned int val)
 		return (0);
 	}
 
-	l = (1 + recur(val / 10));
+	l = (1 + int_recur(val / 10));
 	_putchar((val % 10) + '0');
 	return (l);
 }
