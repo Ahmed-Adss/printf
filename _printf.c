@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		} else
 		{
 			i++;
-			for (j = 0 ; j < 5 ; j++)
+			for (j = 0 ; j < 7 ; j++)
 			{
 				if (format[i] == format_func[j].specifier)
 				{
