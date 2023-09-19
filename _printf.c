@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int chr = 0;
 	va_list va_li;
 
-	if (format == NULL)
+	if (format == NULL || format == '\n')
 		return (-1);
 
 	va_start(va_li, format);
